@@ -1,6 +1,6 @@
 package arreglos.getsetmetodoss3.ejercicio1;
 
-public class Main {
+public class MainProducto {
     public static void main(String[] args) {
 
         ProductoDigital[] productos = new ProductoDigital[3];

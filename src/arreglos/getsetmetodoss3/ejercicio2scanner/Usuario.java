@@ -1,4 +1,4 @@
-package arreglos.getsetmetodoss3.ejercicio2;
+package arreglos.getsetmetodoss3.ejercicio2scanner;
 
 public class Usuario {
 
