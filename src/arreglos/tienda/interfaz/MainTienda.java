@@ -1,10 +1,75 @@
 package arreglos.tienda.interfaz;
 
+import arreglos.tienda.modelo.AppStore;
 import arreglos.tienda.modelo.Juego;
 
+import javax.swing.*;
+import java.util.Scanner;
+
 public class MainTienda {
+    private static Scanner sc = new Scanner(System.in);
+    private static AppStore tienda = new AppStore();
+
     static void main() {
-        Juego j1 = new Juego("Minecraft", "Sandbox", 15, 35, 50);
-        System.out.println(j1);
+        int opc;
+        tienda.cargarDatos();
+        do {
+            menu();
+            opc = Integer.parseInt(sc.nextLine());
+            switch (opc) {
+                case 1: {
+                }
+                break;
+                case 2: {
+                }
+                break;
+                case 3: {
+                }
+                break;
+                case 4: {
+                }
+                break;
+                case 5: {
+                }
+                break;
+                case 6: {
+                }
+                break;
+                case 7: {
+                }
+                break;
+            }
+        } while (opc != 7);
+    }
+
+    public static void menu() {
+        System.out.println("**********Appstore UDLA*********");
+        System.out.println("1. Ingresar Juego");
+        System.out.println("2. Mostar Juegos");
+        System.out.println("3. Buscar Juego");
+        System.out.println("4. Comprar");
+        System.out.println("5. Vender");
+        System.out.println("6. Juego mas vendido");
+        System.out.println("7. Salir");
+        System.out.println("Seleccionar Opcion: ");
+    }
+
+    public static void ingresarJuegos() {
+        System.out.println("**********Ingreso de datos**********");
+        System.out.println("**********Ingrese el nombre*********");
+        String nombre = sc.nextLine();
+        System.out.println("**********Ingrese la categoria******");
+        String categoria = sc.nextLine();
+        System.out.println("**********Ingrese el tamano*********");
+        int tamano = Integer.parseInt(sc.nextLine());
+        System.out.println("**********Ingrese el Precio*********");
+        double precio = Double.parseDouble(sc.nextLine());
+        System.out.println("**********Ingrese el stock inicial**");
+        int licenciasDisponibles = Integer.parseInt(sc.nextLine());
+        if (tienda.agregarJuego(new Juego(nombre, categoria, tamano, precio, licenciasDisponibles))){
+            JOptionPane.showMessageDialog(null, "Juego agregado correctamente");
+        }else{
+            JOptionPane.showMessageDialog(null, "El juego no pudo ser agregado");
+        }
     }
 }
