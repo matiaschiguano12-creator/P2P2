@@ -83,8 +83,12 @@ public class AppStore {
 
     public void cargarDatos(){
         //invoca a agregarJuegos como void xq no le voy a dar un mensaje al usuario
-        agregarJuego(new Juego("Minecraft", "Sandobox", 14, 35, 50));
+        agregarJuego(new Juego("Minecraft😂", "Sandobox", 14, 35, 50));
         agregarJuego(new Juego("Roblox", "PLatformer", 2, 90, 20));
+    }
+
+    public int getIndice() {
+        return indice;
     }
 }
 

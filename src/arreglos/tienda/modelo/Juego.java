@@ -68,7 +68,7 @@ public class Juego {
 
     public boolean comprar(int cantidad) {
         if (cantidad > 0){
-            licenciasVendidas += cantidad;
+            licenciasDisponibles += cantidad;
             return true;
         }
         return false;
